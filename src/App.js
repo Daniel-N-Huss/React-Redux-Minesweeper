@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import Tile from './components/tile';
+import Tile from './components/Tile';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <table>
           <tbody>
             <tr>
-              <Tile />
+              <Tile mine={false} revealed={false} dangerRating={3}/>
             </tr>
           </tbody>
         </table>
