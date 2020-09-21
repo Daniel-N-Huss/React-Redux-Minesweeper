@@ -8,6 +8,12 @@ const generateTiles = function (boardWidth, mineCount) {
 
   let gameData = [];
 
-  return gameData;
+  console.log("generateTiles -> gameData", gameData)
 
+  return gameData;
 }
+
+
+generateTiles();
+
+module.exports = {generateTiles};
