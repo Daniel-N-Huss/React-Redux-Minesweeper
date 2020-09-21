@@ -1,13 +1,13 @@
 const { generateTiles } = require('./tileGenerator');
 
 describe('tileGenerator', () => {
-  it('returns an array of objects', () => {
+  it('returns an array of objects with both true and false bomb keys', () => {
     let partialExpected = [
       { revealed: false, bomb: true },
       { revealed: false, bomb: false },
     ];
 
-    let result = generateTiles();
+    let result = generateTiles(5, 5);
 
     expect(result).toEqual(expect.arrayContaining(partialExpected));
   });
