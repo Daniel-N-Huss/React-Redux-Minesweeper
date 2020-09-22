@@ -1,19 +1,35 @@
-const boardwidth = 16;
-const mineCount = 40;
-
-
 const generateTiles = function (boardWidth, mineCount) {
-
   const boardSize = boardWidth ** 2;
 
-  let gameData = [];
+  let baseData = [];
 
-  console.log("generateTiles -> gameData", gameData)
+  for (let i = mineCount; i > 0; i--) {
+    baseData.push({ revealed: false, mine: true });
+  }
 
-  return gameData;
-}
+  for (let x = boardSize - mineCount; x > 0; x--) {
+    baseData.push({ revealed: false, mine: false });
+  }
 
+  let randomizedData = shuffleTiles(baseData);
 
-generateTiles();
+  return randomizedData;
+};
 
-module.exports = {generateTiles};
+//Fisher-Yates shuffle, taken from https://bost.ocks.org/mike/shuffle/
+const shuffleTiles = function (tiles) {
+  let m = tiles.length,
+    t,
+    i;
+
+  while (m) {
+    i = Math.floor(Math.random() * m--);
+    t = tiles[m];
+    tiles[m] = tiles[i];
+    tiles[i] = t;
+  }
+
+  return tiles;
+};
+
+module.exports = { generateTiles };
