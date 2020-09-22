@@ -9,7 +9,7 @@ describe('calculateDanger', () => {
     ];
 
     const expected = [
-      [{ danger: 0 }, { danger: 0 }, { danger: 1 }],
+      [{ danger: 0 }, { danger: 1 }, { danger: 1 }],
       [{ danger: 1 }, { danger: 2 }, { mine: true}],
       [{ mine: true}, { danger: 2 }, { danger: 1 }],
     ];
@@ -25,7 +25,7 @@ describe('calculateDanger', () => {
 
     const calculated = calculateDanger(seed);
 
-    expect(calculated[1][2]).toBe({mine: true})
+    expect(calculated[1][2]).toEqual({mine: true})
 
   })
 });
