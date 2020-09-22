@@ -3,8 +3,8 @@ const { generateTiles } = require('./tileGenerator');
 describe('tileGenerator', () => {
   it('returns an array of objects with both true and false mine keys', () => {
     let partialExpected = [
-      { revealed: false, mine: true },
-      { revealed: false, mine: false, danger: 0 },
+      [{ revealed: false, mine: true },
+      { revealed: false, mine: false, danger: 0 }]
     ];
 
     let result = generateTiles(5, 5);
@@ -54,4 +54,9 @@ describe('tileGenerator', () => {
     expect(result1).not.toStrictEqual(result2);
   })
 
+  it('should group the tiles into sub-arrays representing each row of the game board', () => {
+
+    const boardWidth = 5;
+
+  })
 });

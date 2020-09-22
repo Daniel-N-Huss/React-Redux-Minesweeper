@@ -1,5 +1,5 @@
 const generateTiles = function (boardWidth, mineCount) {
-  let baseData = seedTiles(boardWidth, mineCount);
+  const baseData = seedTiles(boardWidth, mineCount);
   return shuffleTiles(baseData);
 };
 
