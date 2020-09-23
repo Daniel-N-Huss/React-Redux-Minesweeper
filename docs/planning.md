@@ -106,3 +106,8 @@ Active State:
 
 
 Initial Inactive Board --> Active Board --> Game Over / Victory Inactive Board --> Reset to Initial
+
+
+# State Management
+
+Reducers should be able to target adjacent tiles, perhaps by an ID, to reveal all the neighboring 'safe' tiles.
