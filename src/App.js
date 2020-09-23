@@ -1,6 +1,12 @@
 import React from 'react';
 import './App.scss';
-import Tile from './components/Tile';
+import TileRow from './components/TileRow';
+
+const {setupGameBoard} = require('./helpers/gameData/setupGameBoard');
+
+const gameData = setupGameBoard(16, 40)
+
+console.log(gameData);
 
 function App() {
   return (
@@ -9,9 +15,7 @@ function App() {
         <p>A Minesweeper Game Will Appear</p>
         <table>
           <tbody>
-            <tr>
-              <Tile mine={false} revealed={false} dangerRating={3}/>
-            </tr>
+            <TileRow boardRow={gameData[0]}/>
           </tbody>
         </table>
       </header>
