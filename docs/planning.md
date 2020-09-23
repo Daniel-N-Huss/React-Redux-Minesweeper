@@ -110,4 +110,17 @@ Initial Inactive Board --> Active Board --> Game Over / Victory Inactive Board -
 
 # State Management
 
+Overall I think this app could be built without a state management tool, relying on props and prop drilling to manage state for the whole app. 
+Still, I'm excited to learn Redux and the project spec calls for it to be used.
+
+
 Reducers should be able to target adjacent tiles, perhaps by an ID, to reveal all the neighboring 'safe' tiles.
+
+Redux says global state goes in the store.
+
+Possible global states: 
+
+- The current state of the game loop (initial, active, victory, game over)
+- A decrementing flag counter for how many mines 'remain' after right clicking to set flags
+- A dispatch that handles when the game 'ends' --> whether a mine has been clicked, or all safe tiles are revealed?
+- Reveal tile dispatch for uncovering safe neighbour tiles
