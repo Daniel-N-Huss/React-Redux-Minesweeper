@@ -9,7 +9,7 @@ const initialState = {
   gameStatus: 'initial',
 };
 
-export default function (state = initialState, action) {
+const gameStateReducer = function (state = initialState, action) {
   switch (action.type) {
     case START_GAME: {
       return {
@@ -39,3 +39,5 @@ export default function (state = initialState, action) {
       return state;
   }
 }
+
+export default gameStateReducer;
