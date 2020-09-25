@@ -8,6 +8,7 @@ const TileRow = function (props) {
     return (
       <Tile
         key={index}
+        id={tile.id}
         revealed={tile.revealed}
         mine={tile.mine}
         danger={tile.danger}
