@@ -4,12 +4,15 @@
 // so the performance impacts of these nested loops is small. Finding a better data structure is a must-do in larger scale apps.
 
 const revealSafeTiles = function (adjacentTileIdsArray, shallowStateGameBoard) {
+  const shallowStateKeys = Object.keys(shallowStateGameBoard);
+
   adjacentTileIdsArray.forEach((id) => {
-    for (const tileRows of shallowStateGameBoard) {
-      let foundTile = tileRows.find((tile) => tile.id === id);
-      foundTile.revealed = true;
+    for (const key of shallowStateKeys) {
+      let foundTile = shallowStateGameBoard[key].find((tile) => tile.id === id);
+
+      if (foundTile) foundTile.revealed = true;
     }
   });
 };
 
-export default revealSafeTiles;
+module.exports = { revealSafeTiles };

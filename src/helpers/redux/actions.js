@@ -6,7 +6,7 @@ export const reset = function () {
   };
 };
 
-const revealMine = function (tileId) {
+export const revealTile = function (tileId) {
   return {
     type: 'REVEAL_TILE',
     payload: tileId,

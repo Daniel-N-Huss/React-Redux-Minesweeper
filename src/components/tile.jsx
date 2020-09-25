@@ -1,12 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import {revealTile} from '../helpers/redux/actions'
 import './Tile.scss'
 
 const Tile = function (props) {
+  const dispatch = useDispatch();
+  const {danger, id, revealed} = props;
+  //const [revealed, setRevealed] = useState(props.revealed)
 
-  const {mine, danger, id} = props;
-  const [revealed, setRevealed] = useState(props.revealed)
-
-  return <td key={id} className="tile" onClick={() => setRevealed(true)}>
+  return <td key={id} className="tile" onClick={() => dispatch(revealTile(id))}>
     {revealed ? danger : ' '}
   </td>;
 };
