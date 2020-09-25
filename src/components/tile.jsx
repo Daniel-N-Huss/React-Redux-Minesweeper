@@ -3,11 +3,12 @@ import './Tile.scss'
 
 const Tile = function (props) {
 
-  const {mine, danger} = props;
+  const {mine, danger, key} = props;
   const [revealed, setRevealed] = useState(props.revealed)
 
+  console.log(key);
 
-  return <td className="tile" onClick={() => setRevealed(true)}>
+  return <td key={key} className="tile" onClick={() => setRevealed(true)}>
     {revealed ? danger : ' '}
   </td>;
 };

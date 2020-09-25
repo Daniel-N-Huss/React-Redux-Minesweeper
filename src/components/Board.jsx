@@ -4,14 +4,14 @@ import TileRow from './TileRow';
 const Board = function (props) {
   const { gameData } = props;
 
-  const board = gameData.map((boardRow) => {
+  const board = gameData.map((boardRow, index) => {
     return (
-      <tr>
+      <tr key={index}>
         <TileRow boardRow={boardRow} />
       </tr>
     );
   });
-
+  console.log(board);
   return board;
 };
 

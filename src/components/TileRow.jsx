@@ -4,14 +4,17 @@ import Tile from './Tile';
 const TileRow = function (props) {
   const { boardRow } = props;
 
-  const tileRow = boardRow.map((tile) => {
+  const tileRow = boardRow.map((tile, index) => {
     return (
-      <td>
-        <Tile revealed={tile.revealed} mine={tile.mine} danger={tile.danger} />
-      </td>
+      <Tile
+        key={index}
+        revealed={tile.revealed}
+        mine={tile.mine}
+        danger={tile.danger}
+      />
     );
   });
   return tileRow;
 };
 
-export default TileRow
+export default TileRow;
