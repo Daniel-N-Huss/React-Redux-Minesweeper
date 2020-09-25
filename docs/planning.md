@@ -124,3 +124,11 @@ Possible global states:
 - A decrementing flag counter for how many mines 'remain' after right clicking to set flags
 - A dispatch that handles when the game 'ends' --> whether a mine has been clicked, or all safe tiles are revealed?
 - Reveal tile dispatch for uncovering safe neighbour tiles
+
+
+
+# Questions for Review:
+
+* I've created a 2d array to represent the game board. Would one possible option to overcome this be creating that 2d array to give to
+my React components to map out the child components, but somehow be passing the array data points as a reference to an lookup object
+so I don't have to do nested loops when I want to modify each tile's state be an approach?
