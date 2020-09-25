@@ -1,1 +1,5 @@
-//import { START_GAME, SET_GAME_OVER, SET_VICTORY, RESET_BOARD } from "../actionTypes";
+import { START_GAME, GAME_OVER, SET_VICTORY, RESET_BOARD } from "../actionTypes";
+
+export const revealTile = () => ({
+  
+}) 

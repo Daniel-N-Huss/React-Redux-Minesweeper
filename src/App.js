@@ -7,6 +7,7 @@ const {setupGameBoard} = require('./helpers/gameData/setupGameBoard');
 const gameData = setupGameBoard(16, 40)
 
 
+
 function App() {
   return (
     <div className='App'>
