@@ -11,7 +11,6 @@ const Board = function (props) {
       </tr>
     );
   });
-  console.log(board);
   return board;
 };
 

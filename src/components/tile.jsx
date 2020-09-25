@@ -6,8 +6,6 @@ const Tile = function (props) {
   const {mine, danger, key} = props;
   const [revealed, setRevealed] = useState(props.revealed)
 
-  console.log(key);
-
   return <td key={key} className="tile" onClick={() => setRevealed(true)}>
     {revealed ? danger : ' '}
   </td>;

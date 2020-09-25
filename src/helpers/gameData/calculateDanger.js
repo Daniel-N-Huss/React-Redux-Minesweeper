@@ -7,9 +7,14 @@ This would be one place where I would ask for intermediate/senior input into my 
 */
 
 const calculateDanger = function (tiles) {
+  let currentId = 0
   for (let tileRow = 0; tileRow < tiles.length; tileRow++) {
     for (let tile = 0; tile < tiles.length; tile++) {
       const currentTile = tiles[tileRow][tile];
+
+      currentTile.id = currentId;
+      currentId++;
+
       const currentRow = tiles[tileRow];
       const rowAbove = tiles[tileRow - 1];
       const rowBelow = tiles[tileRow + 1];
