@@ -8,7 +8,11 @@ const Tile = function (props) {
   const {danger, id, revealed} = props;
   //const [revealed, setRevealed] = useState(props.revealed)
 
-  return <td key={id} className="tile" onClick={() => dispatch(revealTile(id))}>
+
+  const className = revealed ? `tile revealed danger_${danger}` : "tile hidden";
+
+
+  return <td key={id} className={className} onClick={() => dispatch(revealTile(id))}>
     {revealed ? danger : ' '}
   </td>;
 };

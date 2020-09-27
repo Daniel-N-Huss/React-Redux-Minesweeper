@@ -1,6 +1,49 @@
 .tile {
-  border: medium ridge white;
-  width: 15px;
-  height: 15px;
+  max-width: 18px;
+  width: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  height: 18px;
+  max-height: 18px;
 }
 
+// .hidden {
+//   background-color: rgb(132, 208, 30);
+// }
+
+.revealed {
+  background-color: rgb(214, 175, 136
+  );
+}
+
+.danger_1 {
+  color: rgb(1, 97, 211);
+}
+
+.danger_2 {
+  color: rgb(0, 137, 44);
+}
+
+.danger_3 {
+  color: rgb(222, 0, 16)
+}
+
+.danger_4 {
+  color: rgb(21, 0, 128);
+}
+
+.danger_5 {
+  color: rgb(140, 0, 0);
+}
+
+.danger_6 {
+  color: rgb(0, 131, 131);
+}
+
+.danger_7 {
+  color: black;
+}
+
+.danger_8 {
+  color: rgb(128, 128, 128);
+}

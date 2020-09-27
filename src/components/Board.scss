@@ -1,0 +1,29 @@
+.board{
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+}
+
+
+td {
+  background: rgb(150, 220, 45);
+}
+
+tr:nth-of-type(odd) td:nth-of-type(odd){
+  background: rgb(132, 208, 30);
+}
+
+tr:nth-of-type(even) td:nth-of-type(even){
+  background: rgb(132, 208, 30);
+}
+
+
+
+
+
+// tr td:nth-child(even){
+  // background: rgb(132, 208, 30);
+// }
+
+// tbody tr:nth-child(even) {
+  // background: rgb(150, 220, 45);
