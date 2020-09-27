@@ -5,7 +5,7 @@ import {Provider} from 'react-redux'
 import store from '../helpers/redux/store'
 
 
-import Tile from '../components/tile';
+import Tile from '../components/Tile';
 
 const withProvider = (story) => (
   <Provider store={store}>
@@ -24,4 +24,5 @@ storiesOf("Tile", module)
 .add("Revealed Danger 5", () => <Tile revealed={true} danger={5}/>)
 .add("Revealed Danger 6", () => <Tile revealed={true} danger={6}/>)
 .add("Revealed Danger 7", () => <Tile revealed={true} danger={7}/>)
+.add("Revealed Danger 8", () => <Tile revealed={true} danger={8}/>)
 .add("Revealed Danger 8", () => <Tile revealed={true} danger={8}/>)
