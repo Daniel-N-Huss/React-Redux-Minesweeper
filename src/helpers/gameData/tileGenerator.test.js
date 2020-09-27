@@ -3,13 +3,15 @@ const { generateTiles } = require('./tileGenerator');
 describe('tileGenerator', () => {
   it('returns an array of objects with both true and false mine keys', () => {
     let partialExpected = [
-      { revealed: false, mine: true },
-      { revealed: false, mine: false, danger: 0 },
+      { revealed: false, mine: true, adjacentTileIDs: [] },
+      { revealed: false, mine: false, danger: 0, adjacentTileIDs: [] },
     ];
 
     let result = generateTiles(5, 5);
 
     expect(result).toEqual(expect.arrayContaining(partialExpected));
+    //expect(result).toContain({mine: true});
+    //expect(result).toContain({mine: false});
   });
 
   it('returns an array containing the correct number of object with mines: true', () => {
@@ -18,7 +20,7 @@ describe('tileGenerator', () => {
     let result = generateTiles(3, mineCount);
 
     for (let i = mineCount; i > 0; i--) {
-      partialExpected.push({ revealed: false, mine: true });
+      partialExpected.push({ revealed: false, mine: true, adjacentTileIDs: []});
     }
 
     expect(result).toEqual(expect.arrayContaining(partialExpected));

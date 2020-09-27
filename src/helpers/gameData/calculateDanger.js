@@ -41,10 +41,10 @@ const calculateDanger = function (tiles) {
       }
 
       const L = currentRow[tile - 1];
-      if (L) giveContext(L, currentTile);
+      giveContext(L, currentTile);
 
       const R = currentRow[tile + 1];
-      if (R) giveContext(R, currentTile);
+      giveContext(R, currentTile);
 
       if (rowBelow) {
         const botL = rowBelow[tile - 1];

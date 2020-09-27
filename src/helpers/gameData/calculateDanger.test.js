@@ -3,9 +3,9 @@ const { calculateDanger } = require('./calculateDanger');
 describe('calculateDanger', () => {
 
   let seed = [
-    [{ danger: 0, mine: false }, { danger: 0, mine: false }, { danger: 0, mine: false }],
-    [{ danger: 0, mine: false }, { danger: 0, mine: false }, { mine: true }],
-    [{ mine: true }, { danger: 0, mine: false }, { danger: 0, mine: false }],
+    [{ danger: 0, mine: false, adjacentTileIDs: [] }, { danger: 0, mine: false, adjacentTileIDs: [] }, { danger: 0, mine: false, adjacentTileIDs: [] }],
+    [{ danger: 0, mine: false, adjacentTileIDs: [] }, { danger: 0, mine: false, adjacentTileIDs: [] }, { mine: true, adjacentTileIDs: [] }],
+    [{ mine: true, adjacentTileIDs: [] }, { danger: 0, mine: false, adjacentTileIDs: [] }, { danger: 0, mine: false, adjacentTileIDs: [] }],
   ];
 
   const expected = [
@@ -20,12 +20,13 @@ describe('calculateDanger', () => {
 
   it('should add a danger key to each tile indicating how many mines are adjacent to it', () => {
     const calcuated = calculateDanger(seed);
-    expect(calcuated).toEqual(expected);
+    //expect(calcuated).toEqual(expect.arrayContaining(expected));
+    expect(calcuated).toContainEqual(expected);
   });
 
   it('should not apply a danger label to a tile with a mine', () => {
     const calculated = calculateDanger(seed);
 
-    expect(calculated[1][2]).toEqual({ mine: true });
+    expect(calculated[1][2]).toMatchObject({ mine: true });
   });
 });
