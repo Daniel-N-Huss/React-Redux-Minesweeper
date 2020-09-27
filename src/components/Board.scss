@@ -2,6 +2,8 @@ table {
   table-layout: fixed;
   border-collapse: collapse;
   height: 100%;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 // .tile {
@@ -15,9 +17,15 @@ table {
 
 
 td {
+  text-align: center;
   background: rgb(150, 220, 45);
-  width: 18px;
-  height: 18px;
+  width: 19px;
+  height: 19px;
+
+  img {
+    vertical-align: middle;
+    width: 14px;
+  }
 }
 
 tr:nth-of-type(odd) td:nth-of-type(odd) {

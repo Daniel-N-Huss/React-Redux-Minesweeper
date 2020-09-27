@@ -6,6 +6,7 @@ import store from '../helpers/redux/store'
 
 
 import Tile from '../components/Tile';
+import '../components/Board.scss'
 
 const withProvider = (story) => (
   <Provider store={store}>
