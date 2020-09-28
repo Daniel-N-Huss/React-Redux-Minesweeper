@@ -1,6 +1,6 @@
 import React from 'react';
 import TileRow from './TileRow';
-import "./Board.scss"
+import './Board.scss';
 
 const Board = function (props) {
   const { gameData } = props;
@@ -12,11 +12,7 @@ const Board = function (props) {
       </tr>
     );
   });
-  return (
-    <table className="board">
-      <tbody>{board}</tbody>
-    </table>
-  );
+  return <tbody>{board}</tbody>;
 };
 
 export default Board;
