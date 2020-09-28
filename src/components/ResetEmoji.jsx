@@ -1,5 +1,5 @@
 import React from 'react';
-import { resetBoard, resetFlagCount, resetTime } from '../helpers/redux/actions';
+import resetGame from '../helpers/resetGame';
 import { useDispatch, useSelector } from 'react-redux';
 import './ResetEmoji.scss';
 
@@ -15,9 +15,7 @@ const ResetEmoji = function () {
       className={'reset'}
       colSpan={2}
       onClick={() => {
-        dispatch(resetFlagCount());
-        dispatch(resetBoard());
-        dispatch(resetTime());
+        resetGame(dispatch);
       }}
     >
       {emoji}

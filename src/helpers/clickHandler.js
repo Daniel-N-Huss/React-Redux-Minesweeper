@@ -1,15 +1,18 @@
 import { revealTile, gameOver, startGame } from '../helpers/redux/actions';
 
-const clickHandler = function (dispatch, tileID, flag, mine) {
-  if (!flag) {
-    dispatch(startGame())
-    dispatch(revealTile(tileID));
+const clickHandler = function (dispatch, props, gameState) {
+  const { id, flag, mine } = props;
 
-    if (mine) {
-      dispatch(gameOver())
+  if (gameState === 'initial' || gameState === 'active') {
+    if (!flag) {
+      dispatch(startGame());
+      dispatch(revealTile(id));
+
+      if (mine) {
+        dispatch(gameOver());
+      }
     }
   }
-
 };
 
 export default clickHandler;

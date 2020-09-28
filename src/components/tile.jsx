@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import clickHandler from '../helpers/clickHandler';
 import rightClickHandler from '../helpers/rightClickHandler';
 import './Tile.scss';
@@ -8,6 +8,8 @@ import flagIcon from './flagIcon.png';
 
 const Tile = function (props) {
   const dispatch = useDispatch();
+  const gameState = useSelector((state) => state.gameState);
+
   const { danger, id, revealed, mine, flag } = props;
 
   const revealedTileContents = mine ? (
@@ -26,7 +28,7 @@ const Tile = function (props) {
     <td
       key={id}
       className={className}
-      onClick={() => clickHandler(dispatch, id, flag, mine)}
+      onClick={() => clickHandler(dispatch, props, gameState)}
       onContextMenu={(e) => {
         e.preventDefault();
         rightClickHandler(dispatch, id, flag);
