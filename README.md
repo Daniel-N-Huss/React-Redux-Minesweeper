@@ -29,7 +29,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Launches the jest test runner in the interactive watch mode.
 
-#### `npm storybook`
+#### `npm run storybook`
 
 Launches the storybook component test environment at [http://localhost:6006](http://localhost:6006) <br /> 
 Here you can see component renderings. 

@@ -17,6 +17,8 @@ const withProvider = (story) => (
 storiesOf("Tile", module)
 .addDecorator(withProvider)
 .add("Unrevealed", () => <Tile revealed={false} id={5}/>)
+.add("Flagged", () => <Tile flag={true}/>)
+.add("Mine", () => <Tile revealed={true} mine={true}/>)
 .add("Revealed No Danger", () => <Tile revealed={true} danger={0}/>)
 .add("Revealed Danger 1", () => <Tile revealed={true} danger={1}/>)
 .add("Revealed Danger 2" , () => <Tile revealed={true} danger={2}/>)
