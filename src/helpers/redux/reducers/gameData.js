@@ -31,10 +31,10 @@ const gameDataReducer = function (state = initialState, action) {
           }
         }
 
-        const updateVictoryTracker = shallowState.victoryTracker.filter(tile => (!tile.revealed && !tile.mine))
-
+        const updateVictoryTracker = shallowState.victoryTracker.filter(
+          (tile) => !tile.revealed && !tile.mine
+        );
         shallowState.victoryTracker = updateVictoryTracker;
-
       }
       return shallowState;
     }

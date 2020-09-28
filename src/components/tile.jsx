@@ -13,12 +13,15 @@ const Tile = function (props) {
   const { danger, id, revealed, mine, flag } = props;
 
   const revealedTileContents = mine ? (
-    <img src={mineIcon} class='mine' alt='Mine' />
+    <img src={mineIcon} className='mine' alt='Mine' />
   ) : (
     danger
   );
 
   const hiddenTileContents = flag ? <img src={flagIcon} alt='Flag' /> : ' ';
+
+  //Display mines if manually debugging
+  // const hiddenTileContents = mine ? <img src={flagIcon} alt='Flag' /> : ' ';
 
   const className = revealed
     ? `tile revealed danger_${danger}`
