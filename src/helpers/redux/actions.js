@@ -1,6 +1,6 @@
 import { START_GAME, GAME_OVER, SET_VICTORY, RESET_BOARD } from './actionTypes';
 
-export const reset = function () {
+export const resetBoard = function () {
   return {
     type: RESET_BOARD,
   };
@@ -47,6 +47,12 @@ export const decrementFlagCount = function () {
 export const incrementFlagCount = function () {
   return {
     type: 'INCREMENT_FLAG',
+  };
+};
+
+export const resetFlagCount = function () {
+  return {
+    type: 'RESET_FLAG',
   };
 };
 

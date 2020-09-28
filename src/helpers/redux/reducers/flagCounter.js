@@ -8,6 +8,10 @@ const flagCountReducer = function (state = 40, action) {
       return state - 1;
     }
 
+    case 'RESET_FLAG': {
+      return state = 40;
+    }
+
     default:
       return state;
   }
