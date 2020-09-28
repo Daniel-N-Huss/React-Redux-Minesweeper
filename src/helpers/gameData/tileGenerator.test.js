@@ -1,4 +1,5 @@
 const { generateTiles } = require('./tileGenerator');
+const { formatData } = require('./formatData')
 
 describe('tileGenerator', () => {
   it('returns an array of objects with both true and false mine keys', () => {
@@ -43,6 +44,17 @@ describe('tileGenerator', () => {
   });
 
   it('should group the tiles into sub-arrays representing each row of the game board', () => {
-    const boardWidth = 5;
+    
+    
+
+    const result1 = formatData(generateTiles(5, 5));
+    const result2 = formatData(generateTiles(10, 10));
+
+    expect(result1.length).toBe(5)
+    expect(result1[0].length).toBe(5)
+    
+    expect(result2.length).toBe(10)
+    expect(result2[0].length).toBe(10)
+
   });
 });
