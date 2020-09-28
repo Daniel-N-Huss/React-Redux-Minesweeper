@@ -1,5 +1,6 @@
 const { setupGameBoard } = require('../../gameData/setupGameBoard');
 const { revealSafeTiles } = require('../revealSafeTiles');
+const { revealMines } = require('../revealMines')
 
 const initialState = setupGameBoard(16, 40);
 
@@ -19,10 +20,10 @@ const GameBoardReducer = function (state = initialState, action) {
           foundTile.revealed = true;
 
           if (foundTile.mine) {
-            //dispatch game over
+            revealMines(shallowState);
           }
 
-          if (!foundTile.danger) {
+          if (!foundTile.danger && !foundTile.mine) {
             revealSafeTiles(foundTile.adjacentTileIDs, shallowState);
           }
         }
