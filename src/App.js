@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { incrementFlagCount } from './helpers/redux/actions'
 
 function App() {
-  const gameBoard = useSelector((state) => state.gameBoard);
+  const gameData = useSelector((state) => state.gameData);
 
   const dispatch = useDispatch();
 
@@ -17,7 +17,7 @@ function App() {
         <button onClick={()=> dispatch(incrementFlagCount())}>+++</button>
         <Nav />
         <table className='board'>
-          <Board gameData={gameBoard} />
+          <Board gameBoard={gameData.gameBoard} />
         </table>
       </header>
     </div>

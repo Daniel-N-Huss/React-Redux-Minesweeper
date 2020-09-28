@@ -2,29 +2,29 @@ const { setupGameBoard } = require('../../gameData/setupGameBoard');
 const { revealSafeTiles } = require('../revealSafeTiles');
 const { revealMines } = require('../revealMines');
 
-const initialState = setupGameBoard(16, 40);
+const initialState = { gameBoard: setupGameBoard(16, 40), revealedTiles: [] };
 
-const GameBoardReducer = function (state = initialState, action) {
+const gameDataReducer = function (state = initialState, action) {
   switch (action.type) {
     case 'RESET_BOARD': {
-      return setupGameBoard(16, 40);
+      return state.gameBoard = setupGameBoard(16, 40);
     }
     case 'REVEAL_TILE': {
       const tileId = action.payload;
-      let shallowState = [...state];
+      let shallowState = { ...state };
 
-      for (const tileRow of shallowState) {
+      for (const tileRow of shallowState.gameBoard) {
         let foundTile = tileRow.find((tile) => tile.id === tileId);
 
         if (foundTile) {
           foundTile.revealed = true;
 
           if (foundTile.mine) {
-            revealMines(shallowState);
+            revealMines(shallowState.gameBoard);
           }
 
           if (!foundTile.danger && !foundTile.mine) {
-            revealSafeTiles(foundTile.adjacentTileIDs, shallowState);
+            revealSafeTiles(foundTile.adjacentTileIDs, shallowState.gameBoard);
           }
         }
       }
@@ -32,9 +32,9 @@ const GameBoardReducer = function (state = initialState, action) {
     }
     case 'TOGGLE_FLAG': {
       const tileId = action.payload;
-      let shallowState = [...state];
+      let shallowState = {...state};
 
-      for (const tileRow of shallowState) {
+      for (const tileRow of shallowState.gameBoard) {
         let foundTile = tileRow.find((tile) => tile.id === tileId);
 
         if (foundTile) {
@@ -49,4 +49,4 @@ const GameBoardReducer = function (state = initialState, action) {
   }
 };
 
-export default GameBoardReducer;
+export default gameDataReducer;

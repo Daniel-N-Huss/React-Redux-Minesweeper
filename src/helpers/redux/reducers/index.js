@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import gameStateReducer from './gameState';
-import gameBoardReducer from './gameBoard';
+import gameDataReducer from './gameData';
 import flagCounterReducer from './flagCounter';
 import timerReducer from './timer';
 
 export default combineReducers({
   gameState: gameStateReducer,
-  gameBoard: gameBoardReducer,
+  gameData: gameDataReducer,
   flagCount: flagCounterReducer,
   timer: timerReducer,
 });

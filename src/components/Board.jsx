@@ -3,9 +3,9 @@ import TileRow from './TileRow';
 import './Board.scss';
 
 const Board = function (props) {
-  const { gameData } = props;
+  const { gameBoard } = props;
 
-  const board = gameData.map((boardRow, index) => {
+  const board = gameBoard.map((boardRow, index) => {
     return (
       <tr className='tileRow' key={index}>
         <TileRow boardRow={boardRow} />
