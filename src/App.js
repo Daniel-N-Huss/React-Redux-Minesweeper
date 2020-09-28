@@ -2,19 +2,15 @@ import React from 'react';
 import './App.scss';
 import Board from './components/Board';
 import Nav from './components/Nav';
-import { useSelector, useDispatch } from 'react-redux';
-import { incrementFlagCount } from './helpers/redux/actions'
+import { useSelector } from 'react-redux';
 
 function App() {
   const gameData = useSelector((state) => state.gameData);
 
-  const dispatch = useDispatch();
-
   return (
     <div className='App'>
-      <header className='App-header'>
-        <p>A Minesweeper Game Will Appear</p>
-        <button onClick={()=> dispatch(incrementFlagCount())}>+++</button>
+      <p>Welcome to Daniel's React/Redux-Sweeper</p>
+      <header className='minesweeper-box'>
         <Nav />
         <table className='board'>
           <Board gameBoard={gameData.gameBoard} />

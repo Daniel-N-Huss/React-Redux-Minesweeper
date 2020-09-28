@@ -5,5 +5,10 @@
   background: rgb(49, 111, 29);
   height: 45px;
   width: 100%;
+  border-bottom: solid gray 2px;
   
+  .placeholder {
+    width: 25%;
+    cursor: not-allowed;
+  }
 }

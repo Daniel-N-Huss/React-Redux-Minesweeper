@@ -7,6 +7,7 @@ const Nav = function () {
   return (
     
       <nav className='nav'>
+        <button className='placeholder'>Medium</button>
         <ResetEmoji />
         <StatDisplay />
       </nav>
