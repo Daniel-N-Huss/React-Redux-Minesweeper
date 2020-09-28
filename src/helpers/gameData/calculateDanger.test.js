@@ -21,7 +21,15 @@ describe('calculateDanger', () => {
   it('should add a danger key to each tile indicating how many mines are adjacent to it', () => {
     const calcuated = calculateDanger(seed);
     //expect(calcuated).toEqual(expect.arrayContaining(expected));
-    expect(calcuated).toContainEqual(expected);
+    expect(calcuated[0][0].danger).toEqual(expected[0][0].danger);
+    expect(calcuated[0][1].danger).toEqual(expected[0][1].danger);
+    expect(calcuated[0][2].danger).toEqual(expected[0][2].danger);
+    expect(calcuated[1][0].danger).toEqual(expected[1][0].danger);
+    expect(calcuated[1][1].danger).toEqual(expected[1][1].danger);
+    expect(calcuated[1][2].danger).toEqual(expected[1][2].danger);
+    expect(calcuated[2][0].danger).toEqual(expected[2][0].danger);
+    expect(calcuated[2][1].danger).toEqual(expected[2][1].danger);
+    expect(calcuated[2][2].danger).toEqual(expected[2][2].danger);
   });
 
   it('should not apply a danger label to a tile with a mine', () => {

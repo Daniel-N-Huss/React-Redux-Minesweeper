@@ -29,3 +29,9 @@ storiesOf("Tile", module)
 .add("Revealed Danger 7", () => <Tile revealed={true} danger={7}/>)
 .add("Revealed Danger 8", () => <Tile revealed={true} danger={8}/>)
 .add("Revealed Danger 8", () => <Tile revealed={true} danger={8}/>)
+
+
+export default {
+  title: 'Tile',
+  argTypes: { onClick: { action: 'clickHandle --> reveal' }, onContextMenu: { action: 'rightClickHandle --> flag'} },
+};

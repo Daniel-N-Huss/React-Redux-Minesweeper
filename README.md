@@ -31,7 +31,7 @@ Launches the jest test runner in the interactive watch mode.
 
 #### `npm run storybook`
 
-Launches the storybook component test environment at [http://localhost:6006](http://localhost:6006) <br /> 
+Builds and launches the storybook component test environment at [http://localhost:6006](http://localhost:6006) <br /> 
 Here you can see component renderings. 
 
 ## Future Features:

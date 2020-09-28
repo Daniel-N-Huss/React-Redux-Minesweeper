@@ -2,28 +2,25 @@ const { generateTiles } = require('./tileGenerator');
 
 describe('tileGenerator', () => {
   it('returns an array of objects with both true and false mine keys', () => {
-    let partialExpected = [
-      { revealed: false, mine: true, adjacentTileIDs: [] },
-      { revealed: false, mine: false, danger: 0, adjacentTileIDs: [] },
-    ];
-
     let result = generateTiles(5, 5);
 
-    expect(result).toEqual(expect.arrayContaining(partialExpected));
-    //expect(result).toContain({mine: true});
-    //expect(result).toContain({mine: false});
+    let mine = result.find((element) => (element.mine = true));
+    let noMine = result.find((element) => !element.mine);
+
+    expect(mine).toBeDefined();
+    expect(noMine).toBeDefined();
   });
 
   it('returns an array containing the correct number of object with mines: true', () => {
     let mineCount = 5;
-    let partialExpected = [];
     let result = generateTiles(3, mineCount);
 
-    for (let i = mineCount; i > 0; i--) {
-      partialExpected.push({ revealed: false, mine: true, adjacentTileIDs: []});
-    }
+    let onlyMines = result.filter((element) => element.mine);
+    let noMine = onlyMines.find((element) => !element.mine);
 
-    expect(result).toEqual(expect.arrayContaining(partialExpected));
+    expect(onlyMines.length).toBe(5);
+
+    expect(noMine).not.toBeDefined();
   });
 
   it('returns the correct number of tiles to fill the game board', () => {
