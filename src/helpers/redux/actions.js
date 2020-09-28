@@ -12,3 +12,16 @@ export const revealTile = function (tileId) {
     payload: tileId,
   };
 };
+
+export const toggleFlag = function (tileId) {
+  return {
+    type: 'TOGGLE_FLAG',
+    payload: tileId,
+  };
+};
+
+export const gameOver = function () {
+  return {
+    type: GAME_OVER,
+  };
+};

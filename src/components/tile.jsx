@@ -4,6 +4,7 @@ import clickHandler from '../helpers/clickHandler';
 import './Tile.scss';
 import mineIcon from './mineIcon.png';
 import flagIcon from './flag.png';
+import { toggleFlag } from '../helpers/redux/actions';
 
 const Tile = function (props) {
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ const Tile = function (props) {
       onClick={() => clickHandler(dispatch, id, flag)}
       onContextMenu={(e) => {
         e.preventDefault();
+        dispatch(toggleFlag(id))
       }}
     >
       {revealed ? revealedTileContents : hiddenTileContents}
