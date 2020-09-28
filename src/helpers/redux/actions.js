@@ -49,3 +49,15 @@ export const incrementFlagCount = function () {
     type: 'INCREMENT_FLAG',
   };
 };
+
+export const incrementTimer = function () {
+  return {
+    type: 'INCREMENT_TIME',
+  };
+};
+
+export const resetTime = function () {
+  return {
+    type: 'RESET_TIME',
+  };
+};
