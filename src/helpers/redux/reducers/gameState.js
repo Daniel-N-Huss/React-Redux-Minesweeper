@@ -7,6 +7,8 @@ import {
 
 const initialState = {
   gameStatus: 'initial',
+  timer: {active: false, count: 0},
+  flagCount: 40
 };
 
 const gameStateReducer = function (state = initialState, action) {
