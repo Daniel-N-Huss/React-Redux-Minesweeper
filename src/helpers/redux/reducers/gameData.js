@@ -7,7 +7,8 @@ const initialState = { gameBoard: setupGameBoard(16, 40), revealedTiles: [] };
 const gameDataReducer = function (state = initialState, action) {
   switch (action.type) {
     case 'RESET_BOARD': {
-      return state.gameBoard = setupGameBoard(16, 40);
+      const newGame = setupGameBoard(16, 40);
+      return {...state, gameBoard: newGame, revealedTiles: []}
     }
     case 'REVEAL_TILE': {
       const tileId = action.payload;
