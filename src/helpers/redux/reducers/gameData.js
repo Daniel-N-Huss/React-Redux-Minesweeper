@@ -22,10 +22,10 @@ const gameDataReducer = function (state = initialState, action) {
 
           if (foundTile.mine) {
             revealMines(shallowState.gameBoard);
-          }
+          } 
 
           if (!foundTile.danger && !foundTile.mine) {
-            revealSafeTiles(foundTile.adjacentTileIDs, shallowState.gameBoard);
+            revealSafeTiles(foundTile.adjacentTileIDs, shallowState);
           }
         }
       }

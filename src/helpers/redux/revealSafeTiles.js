@@ -5,15 +5,15 @@
 // Recursively revealing tiles impacts this to a greater extent.
 // Finding a better data structure is a must-do in larger scale apps.
 
-const revealSafeTiles = function (adjacentTileIDsArray, shallowStateGameBoard) {
+const revealSafeTiles = function (adjacentTileIDsArray, shallowState) {
   adjacentTileIDsArray.forEach((id) => {
-    for (const tileRow of shallowStateGameBoard) {
+    for (const tileRow of shallowState.gameBoard) {
       let foundTile = tileRow.find((tile) => tile.id === id);
 
       if (foundTile && !foundTile.revealed) {
         foundTile.revealed = true;
         if (!foundTile.danger) {
-          revealSafeTiles(foundTile.adjacentTileIDs, shallowStateGameBoard);
+          revealSafeTiles(foundTile.adjacentTileIDs, shallowState);
         }
       }
     }
