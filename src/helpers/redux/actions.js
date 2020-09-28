@@ -1,8 +1,6 @@
-import { START_GAME, GAME_OVER, SET_VICTORY, RESET_BOARD } from './actionTypes';
-
 export const resetBoard = function () {
   return {
-    type: RESET_BOARD,
+    type: 'RESET_BOARD',
   };
 };
 
@@ -22,19 +20,19 @@ export const toggleFlag = function (tileId) {
 
 export const startGame = function () {
   return {
-    type: START_GAME,
+    type: 'START_GAME',
   };
 };
 
 export const gameOver = function () {
   return {
-    type: GAME_OVER,
+    type: 'GAME_OVER',
   };
 };
 
 export const victory = function () {
   return {
-    type: SET_VICTORY,
+    type: 'SET_VICTORY',
   };
 };
 
