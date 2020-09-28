@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import clickHandler from '../helpers/clickHandler';
 import './Tile.scss';
 import mineIcon from './mineIcon.png';
-import flagIcon from './flag.png';
+import flagIcon from './flagIcon.png';
 import { toggleFlag } from '../helpers/redux/actions';
 
 const Tile = function (props) {
