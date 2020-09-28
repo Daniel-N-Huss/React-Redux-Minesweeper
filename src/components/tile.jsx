@@ -26,7 +26,7 @@ const Tile = function (props) {
     <td
       key={id}
       className={className}
-      onClick={() => clickHandler(dispatch, id, flag)}
+      onClick={() => clickHandler(dispatch, id, flag, mine)}
       onContextMenu={(e) => {
         e.preventDefault();
         rightClickHandler(dispatch, id, flag);
