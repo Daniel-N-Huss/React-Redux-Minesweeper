@@ -5,39 +5,23 @@ import {
   RESET_BOARD,
 } from '../actionTypes';
 
-const initialState = {
-  gameStatus: 'initial',
-};
-
-const gameStateReducer = function (state = initialState, action) {
+const gameStateReducer = function (state = 'initial', action) {
   switch (action.type) {
     case START_GAME: {
-      return {
-        ...state,
-        gameStatus: 'active',
-      };
+      return (state = 'active');
     }
     case GAME_OVER: {
-      return {
-        ...state,
-        gameStatus: 'gameOver',
-      };
+      return (state = 'gameOver');
     }
     case SET_VICTORY: {
-      return {
-        ...state,
-        gameStatus: 'victory',
-      };
+      return (state = 'victory');
     }
     case RESET_BOARD: {
-      return {
-        ...state,
-        gameStatus: 'initial',
-      };
+      return (state = 'initial');
     }
     default:
       return state;
   }
-}
+};
 
 export default gameStateReducer;
