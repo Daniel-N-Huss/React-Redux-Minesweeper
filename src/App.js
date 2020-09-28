@@ -11,8 +11,8 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <p>A Minesweeper Game Will Appear</p>
+        <Nav />
         <table className='board'>
-          <Nav />
           <Board gameData={gameBoard} />
         </table>
       </header>
