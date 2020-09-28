@@ -5,7 +5,6 @@ import rightClickHandler from '../helpers/rightClickHandler';
 import './Tile.scss';
 import mineIcon from './mineIcon.png';
 import flagIcon from './flagIcon.png';
-import { toggleFlag } from '../helpers/redux/actions';
 
 const Tile = function (props) {
   const dispatch = useDispatch();
