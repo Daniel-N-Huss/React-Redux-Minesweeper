@@ -8,10 +8,10 @@ const seedTiles = function (boardWidth, mineCount) {
   let result = [];
 
   for (let i = mineCount; i > 0; i--) {
-    result.push({ revealed: false, mine: true, adjacentTileIDs: [] });
+    result.push({ revealed: false, mine: true, adjacentTileIDs: [], flag: false });
   }
   for (let x = boardSize - mineCount; x > 0; x--) {
-    result.push({ revealed: false, mine: false, danger: 0, adjacentTileIDs: [] });
+    result.push({ revealed: false, mine: false, danger: 0, adjacentTileIDs: [], flag: false });
   }
   return result;
 };

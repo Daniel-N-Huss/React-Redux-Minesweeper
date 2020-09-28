@@ -12,6 +12,7 @@ const TileRow = function (props) {
         revealed={tile.revealed}
         mine={tile.mine}
         danger={tile.danger}
+        flag={tile.flag}
       />
     );
   });
