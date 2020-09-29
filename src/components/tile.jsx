@@ -20,9 +20,6 @@ const Tile = function (props) {
 
   const hiddenTileContents = flag ? <img src={flagIcon} alt='Flag' /> : ' ';
 
-  //Display mines if manually debugging--v
-  // const hiddenTileContents = mine ? <img src={flagIcon} alt='Flag' /> : ' ';
-
   const className = revealed
     ? `tile revealed danger_${danger}`
     : `tile hidden flag_${flag}`;

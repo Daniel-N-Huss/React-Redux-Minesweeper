@@ -1,4 +1,4 @@
-// Again my implementation is utilizing nested arrays loops to identify which other tiles are neighbors
+// Here I'm utilizing nested arrays loops to identify which other tiles are neighbors
 // to reveal them when the currently clicked tile has a 0 danger rating.
 // I'm uncomfortable with the implementation, but there is a hard limit - only a max of 8 neighbors exist for each tile,
 // so the performance impacts of these nested loops is small. 
