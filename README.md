@@ -9,9 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Getting Started:
 
-This file currently does not live on GitHub, so you've likely received this in a zip file shared privately! 
-
-Extract the .zip folder to a directory of your choosing, and in terminal or powershell enabled with NPM, navigate to that directory. 
+Clone the repo to a local folder of your choice.
 
 From the root directory, run  
 ```
@@ -39,4 +37,3 @@ Here you can see component renderings.
 Currently this minesweeper version only has one difficulty setting. The game generation is agnostic to the size of the board generated, and a small refactor would allow dynamic board size.
 
 Testing focused on redux is missing, and implementing some store tests would aid the project as a whole.
-
