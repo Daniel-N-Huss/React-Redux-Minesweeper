@@ -1,4 +1,7 @@
-# Welcome to React Minesweeper
+# Welcome to React-Redux Minesweeper
+
+### You can find a hosted version of the game [here](https://silly-poincare-b42461.netlify.app/)!
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), and utilizes: 
 1. [Redux](https://redux.js.org/) for state management.
