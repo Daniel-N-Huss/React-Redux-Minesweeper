@@ -1,6 +1,6 @@
-const { generateTiles } = require('./tileGenerator');
-const { calculateDanger } = require('./calculateDanger')
-const { formatData } = require('./formatData');
+import generateTiles from './tileGenerator';
+import calculateDanger from './calculateDanger';
+import formatData from './formatData';
 
 const setupGameBoard = function (boardWidth, mineCount) {
   const tiles = generateTiles(boardWidth, mineCount);
@@ -10,4 +10,4 @@ const setupGameBoard = function (boardWidth, mineCount) {
   return board;
 }
 
-module.exports = { setupGameBoard }
+export default setupGameBoard;

@@ -11,4 +11,4 @@ const formatData = function (array) {
   return result;
 };
 
-module.exports = { formatData }
+export default formatData;

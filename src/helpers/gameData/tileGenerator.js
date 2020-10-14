@@ -32,4 +32,4 @@ const shuffleTiles = function (tiles) {
   return tiles;
 };
 
-module.exports = { generateTiles };
+export default generateTiles;

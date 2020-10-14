@@ -70,4 +70,4 @@ const giveContext = function (targetTile, currentTile) {
   }
 };
 
-module.exports = { calculateDanger };
+export default calculateDanger;

@@ -1,6 +1,6 @@
-const { setupGameBoard } = require('../../gameData/setupGameBoard');
-const { revealSafeTiles } = require('../revealSafeTiles');
-const { revealMines } = require('../revealMines');
+import setupGameBoard from '../../gameData/setupGameBoard'
+import revealSafeTiles from'../revealSafeTiles';
+import revealMines from '../revealMines';
 
 const initGame = setupGameBoard(16, 40);
 

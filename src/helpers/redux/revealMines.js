@@ -9,4 +9,4 @@ const revealMines = function (shallowStateGameBoard) {
   return result;
 };
 
-module.exports = { revealMines };
+export default revealMines;

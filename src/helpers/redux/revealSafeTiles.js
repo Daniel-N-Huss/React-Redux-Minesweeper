@@ -20,4 +20,4 @@ const revealSafeTiles = function (adjacentTileIDsArray, shallowState) {
   });
 };
 
-module.exports = { revealSafeTiles };
+export default revealSafeTiles;
